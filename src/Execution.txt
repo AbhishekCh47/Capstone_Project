@@ -1,0 +1,14 @@
+Project Execution :- Automated Traffic Light Control And Violation Detection System
+
+Firstly, install all the modules and files which are listed in the requirements.txt
+Install xampp and start xampp to host our website site.
+Run apis.py python application
+Now open the website , By the website we can interact the project features.
+Project Features:
+1. Signal Controller
+2. Line Violation
+3. Helmet Detection
+4. Number plate Detection
+
+By clicking on the respective button we can observe that the particular system features
+is executed and we can interact through the respective tkinter inteface.

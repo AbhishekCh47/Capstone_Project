@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta tags and title -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="author" content="Arafat Hossain Ar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Traffic Automation</title>
+    
+    <!-- Bootstrap library and Jquery -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+      function line_violation() {
+        var request = new XMLHttpRequest();
+
+        request.open('GET', 'http://localhost:8000/line-violation', true);
+
+        request.onload = function () {
+          var i;
+          i = 0;
+          while(i)
+          {
+            i = i+1;
+          }
+        }
+        request.send();
+      }
+    </script>
+    <script>
+      function automation(){
+        var request = new XMLHttpRequest();
+
+        request.open('GET', 'http://localhost:8000/automation', true);
+
+        request.onload = function () {
+          var i;
+          i = 0;
+          while(i)
+          {
+            i = i+1;
+          }
+        }
+        request.send();
+      }
+    </script>
+    <script>
+      function helmet_detection() {
+        var request = new XMLHttpRequest();
+
+        request.open('GET', 'http://localhost:8000/helmet-detection', true);
+
+        request.onload = function () {
+          var i;
+          i = 0;
+          while(i)
+          {
+            i = i+1;
+          }
+        }
+        request.send();
+      }
+    </script>
+    <script>
+      function licence_plate_detection() {
+        var request = new XMLHttpRequest();
+
+        request.open('GET', 'http://localhost:8000/licence-plate-detection', true);
+
+        request.onload = function () {
+          var i;
+          i = 0;
+          while(i)
+          {
+            i = i+1;
+          }
+        }
+        request.send();
+      }
+    </script>    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+  <!-- Loader -->
+    <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
+
+   <!-- Nav -->
+
+    <nav class="navbar navbar-expand-lg fixed-top nav-area">
+      <a href="#" class="navbar-brand brand-name">
+       <!-- <span><b>KSP</b><u>.COM</u></span>!-->
+		<img src="ka_police_logo.jpeg" width="85px" height="100px" />
+      </a>
+      <button
+        id="colnav"
+        class="navbar-toggler navbar-toggler-right"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class=""> <i class="fa fa-bars"></i> </span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">HOME</a>
+          </li>
+          <!-- domain dropdown -->
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              >SIGNAL CONTROLLER</a
+            >
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbardrop"
+              data-toggle="dropdown"
+              >TRAFFIC VIOLATION</a
+            >
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Line Violation</a>
+              <a class="dropdown-item" href="#">Helmet Violation</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              >NUMBER PLATE DETECTION</a
+            >
+          </li>
+        </ul>
+        <div class="dropdown-divider"></div>
+        <ul class="navbar-nav my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i
+                class="fa fa-sign-in"
+                style="padding-right: 5px;"
+                aria-hidden="true"
+              ></i
+              >Login</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i
+                class="fa fa-user"
+                style="padding-right: 5px;"
+                aria-hidden="true"
+              ></i
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="banner-area">
+	<!--<img src="ka_police_logo.jpeg" width="85px" height="100px" />-->
+      <div id="circles"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="banner-text">
+              <h1
+                data-aos-delay="300"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                Karnataka Traffic Management Center
+              </h1>
+              <p
+                data-aos-delay="500"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                Let's make state less probable to Traffic Congestion and Violations.<br /><i class="fa fa-headphones"> </i>
+                24/7 Monitoring. <br /><br />
+                <strong class="textchng">They say the universe expanding<br/>That should help traffic. <b id="changing"></b></strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="firsttext">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            Donate Blood &#128522; But not on roads &#128521;<br />
+            Rules make life easy & Don't cheat with roads &#128530;
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="package-area">
+      <div class="container">
+        <b class="package-head"
+          >System Features
+          <hr
+        /></b>
+        <div class="row">
+          <div class="col-md-6 col-lg-6 col-sm-12">
+            <ul
+              class="list-group"
+              data-aos-delay="300"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              <li class="list-group-item package-headtext" id = "automation">
+                <h2 class="text-primary">SIGNAL CONTROLLER <span>Automation</span></h2>
+                <h5>For efficient traffic movement</h5>
+				<h5>Automate the traffic lights without manual control.</h5>
+              </li>
+              <li class="list-group-item">This proposed system is a 5 step methodology</li>
+              <li class="list-group-item">Image Cleaning</li>
+              <li class="list-group-item">Feature Extraction </li>
+              <li class="list-group-item">Training the model</li>
+              <li class="list-group-item">Density Estimation</li>
+              <li class="list-group-item">Traffic Light Signalling</li>
+              <li class="list-group-item">
+                <button type="submit" class="btn btn-primary btn-block" onclick="automation()">
+                  <b>Automation</b>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12">
+            <ul
+              class="list-group"
+              data-aos-delay="300"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              <li class="list-group-item package-headtext">
+                <h2 class="text-primary">
+                  LINE VIOLATION
+                  <span style="background-color: rgb(56, 66, 75);"
+                    >Violation</span
+                  >
+                </h2>
+                <h5>For capturing signal jumps</h5>
+				<h5>Video processing model for identifying signal jumping</h5>
+              </li>
+              <li class="list-group-item">Model is implemented by drawing the traffic line on the road</li>
+              <li class="list-group-item">Line indicates that traffic light is red in state</li>
+              <li class="list-group-item">Violation occurs  when vehicles cross the traffic line</li>
+              <li class="list-group-item">YOLO Algorithm is used for object detection</li>
+              <li class="list-group-item">Once the vehicles are detected violation cases are checked</li>
+              <li class="list-group-item">Bounding box around the vehicle becomes red after violation</li>
+              <li class="list-group-item">
+                <button type="submit" class="btn btn-primary btn-block" onclick="line_violation()">
+                  <b>Line Violation</b>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12">
+            <ul
+              class="list-group"
+              data-aos-delay="300"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              <li class="list-group-item package-headtext">
+                <h2 class="text-primary">
+                  ANPR
+                  <span style="background-color: rgb(170, 18, 157);"
+                    >Feature</span
+                  >
+                </h2>
+                <h5>Identifying number plate for violated vehicle</h5>
+				<h5>Image processing model for identifying number plate</h5>
+              </li>
+              <li class="list-group-item">If the helmet is not found then we proceed to this step</li>
+              <li class="list-group-item">Bounding box is created across the license plate for the image</li>
+              <li class="list-group-item">Json file stores info like coordinates of the bounding box etc</li>
+              <li class="list-group-item">Extracted images are stored so that we can</li>
+              <li class="list-group-item">Use the coordinates stored in the file to extract the license plate </li>
+              <li class="list-group-item">Confidence greater than threshold is chosen for reading</li>
+              <li class="list-group-item">
+                <button type="submit" class="btn btn-primary btn-block" onclick="licence_plate_detection()">
+                  <b>ANPR</b>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12">
+            <ul
+              class="list-group"
+              data-aos-delay="300"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              <li class="list-group-item package-headtext">
+                <h2 class="text-primary">
+                  HELMET DETECTION
+                  <span style="background-color: rgb(83, 112, 241);"
+                    >Violation</span
+                  >
+                </h2>
+                <h5>Identifying the person who not wearing helmet</h5>
+				<h5>Model for detecting non helmet riders</h5>
+              </li>
+              <li class="list-group-item">The Image is given as input to the helmet detection model</li>
+              <li class="list-group-item">If rider is wearing helmet then further processing is not required</li>
+              <li class="list-group-item">If rider is not wearing the helmet then process starts</li>
+              <li class="list-group-item">We need to crop image and process it to the model</li>
+              <li class="list-group-item">Where a bounding box around the helmet with probability</li>
+              <li class="list-group-item">Displayed</li>
+              <li class="list-group-item">
+                <button type="submit" class="btn btn-primary btn-block" onclick="helmet_detection()">
+                  <b>Helmet Detection</b>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+	<center><a href="https://vahaninfos.com/vehicle-details-by-number-plate"><h4>Click Here to get Vehicle owner Details of Registration Number</h4></a></center>
+    <div class="dis-area">
+      <svg
+        style="margin-bottom: -8px;"
+        xmlns="http://www.w3.org/2000/svg"
+        class="curve-container__curve curve-one bg-c-w100"
+        viewBox="0 0 1440 68"
+        enable-background="new 0 0 1440 68"
+      >
+        <path
+          d="m1622.3 1937.7c0 0-410.7 169.1-913.4 75.5-502.7-93.6-977.7 56.3-977.7 56.3v440h1891.1v-571.8"
+          fill="#E0E4E8 "
+          transform="translate(0-1977)"
+        ></path>
+      </svg>
+      <div
+        class="container-fluid"
+        style="background-color: #e0e4e8; margin-top: 2px;"
+      >
+        <div class="row">
+          <div
+            class="col-md-12 col-sm-12"
+            data-aos-delay="500"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <h1>Why KTMC.Com is Different?</h1>
+            <span
+              >Let's make state less probable to Traffic Congestion and Violations with current technologies by automating system<br/> which also
+				helps to reduce man power and impose challan in efficient manner.</span
+            >
+          </div>
+        </div>
+        <div class="row dis-art">
+          <div
+            class="col-sm-12 col-md-4"
+            data-aos-delay="300"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <span><i class="fa fa-handshake-o"></i></span>
+          </div>
+          <div
+            class="col-sm-12 col-md-8"
+            data-aos-delay="300"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <h3>Trust</h3>
+            <p>
+              User Information is completely owned by government, So there will be
+			  guaranteed trust.
+            </p>
+          </div>
+          <div
+            class="col-sm-12 col-md-4"
+            data-aos-delay="300"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <span><i class="fa fa-tachometer" aria-hidden="true"></i></span>
+          </div>
+          <div
+            class="col-sm-12 col-md-8"
+            data-aos-delay="300"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h3>Performance</h3>
+            <p>
+              More efficient than existing system.
+            </p>
+          </div>
+          <div
+            class="col-sm-12 col-md-4"
+            data-aos-delay="300"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <span><i class="fa fa-lock" aria-hidden="true"></i></span>
+          </div>
+          <div
+            class="col-sm-12 col-md-8"
+            data-aos-delay="300"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <h3>Privacy & Security</h3>
+            <p>
+              Privacy and Security are our highest priority. Data captured by camera
+			  is completely secured and own by government.
+            </p>
+          </div>
+          <div
+            class="col-sm-12 col-md-4"
+            data-aos-delay="300"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <span><i class="fa fa-suitcase" aria-hidden="true"></i></span>
+          </div>
+          <div
+            class="col-sm-12 col-md-8"
+            data-aos-delay="300"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <h3>Easy Set Up</h3>
+            <p>
+              Install all necessary module's and package's from the Installation guide
+			  and setup the proper path for input feed as given in guide.
+            </p>
+          </div>
+          <div
+            class="col-sm-12 col-md-4"
+            data-aos-delay="300"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <span><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+          </div>
+          <div
+            class="col-sm-12 col-md-8"
+            data-aos-delay="300"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <h3>24/7 Support</h3>
+            <p>
+              Our Dedicated support team is always available to make sure
+              the system working properly.
+            </p>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <div class="help-area bg-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <h1
+              data-aos-delay="300"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              Need Some Help?
+            </h1>
+            <p data-aos-delay="300" data-aos="zoom-in" data-aos-duration="1000">
+              What can we do for you? We here to meet your needs.
+              <br />
+              Customer Support Chat: Every Day 10.00AM To 7.00PM
+            </p>
+            <button
+              data-aos-delay="300"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              type="button"
+              class="btn btn-outline-light"
+            >
+              Send us an Email
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer bg-dark">
+      <div
+        class="conainter"
+        data-aos-delay="300"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      >
+        <div class="row">
+          <div class="col-6 col-md-6 col-sm-6">
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">&copy;Team Pes</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-6 col-sm-6">
+            <ul>
+              <li><a href="">Support</a></li>
+              <li><a href="">Terms Of Service</a></li>
+              <div class="social" style="display: flex;">
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="#" class="fa fa-youtube"></a></li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--AOS animation-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <!--Auto text change js-->
+    <script src="https://drive.google.com/uc?export=view&id=1KGKGUlR0tZDAzZkUBfmWayXPx3vrVBZD"></script>
+    <!--Polygon animation-->
+    <script src="https://drive.google.com/uc?export=view&id=1EV3I79egC9xsllli9FK6kivO4fXkRINE"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

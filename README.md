@@ -96,7 +96,7 @@ This project aims to develop an automated system that optimizes traffic light co
 
 - **Improved Accuracy**: Further refinement of the image processing and machine learning models to improve detection accuracy under various lighting and environmental conditions.
 - **Integration with Government Databases**: Automatic reporting of violations to the relevant authorities.
-- **Scalability**: Extend the system to handle multiple traffic junctions and integrate real-time traffic data from multiple sources.
+- **Scalability**: Extend the system to handle multiple traffic junctions and integrate real-time traffic data from multiple sources
 - **Advanced Violation Detection**: Detect additional violations such as speeding or signal jumping using more advanced AI techniques.
 
 ---
